@@ -17,4 +17,8 @@ phases:
     post_build:
         commands:
             - echo "we are in the post build phase"
-            
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: .  # 또는 'dist', 'build' 등 실제 코드 위치에 맞게 조정
