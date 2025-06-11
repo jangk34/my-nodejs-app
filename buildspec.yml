@@ -14,7 +14,6 @@ phases:
 
 artifacts:
   files:
-    - app.js
-    - package.json
-    - index.html
-  discard-paths: yes
+    - '**/*'
+  name: 'app-$(date +%s)'
+
