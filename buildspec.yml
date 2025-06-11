@@ -2,25 +2,12 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: latest
     commands:
-      - echo "Installing dependencies..."
-      - npm install
-
-  pre_build:
-    commands:
-      - echo "Running pre-build checks..."
-      - grep -Fq "Congratulations" index.html || echo "Warning: Congratulations not found in index.html"
-
+      - echo "Installing..."
   build:
     commands:
-      - echo "Building application..."
-
-  post_build:
-    commands:
-      - echo "Zipping application for Elastic Beanstalk (Docker platform)..."
-      - zip -r app.zip Dockerfile app.js index.html package.json commands.sh cron.yaml appspec.yml LICENSE.txt || true
+      - echo "Zipping app..."
+      - zip -r app.zip . || true
 
 artifacts:
   files:
