@@ -16,7 +16,6 @@ phases:
   build:
     commands:
       - echo "Building application (if applicable)..."
-      # 별도 빌드 과정이 없으면 이 단계 생략 가능
 
   post_build:
     commands:
