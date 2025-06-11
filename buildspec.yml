@@ -7,10 +7,14 @@ phases:
     commands:
       - echo "Installing dependencies..."
       - npm install
+
   build:
     commands:
       - echo "Build complete"
+
 artifacts:
   files:
-    - '**/*'
-  discard-paths: no
+    - app.js
+    - package.json
+    - index.html
+  discard-paths: yes
